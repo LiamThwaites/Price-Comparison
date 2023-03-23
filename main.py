@@ -40,10 +40,16 @@ def compare_prices(budget, products):
 
 # Example usage
 budget = float(input("Enter your budget: "))
-products = {
-    "apple": {"price": 2.99, "quantity": 3},
-    "banana": {"price": 1.99, "quantity": 4},
-    "orange": {"price": 3.99, "quantity": 2},
-    "grape": {"price": 5.99, "quantity": 1}
-}
+
+products = {}
+
+# Ask user to input information for each product
+for i in range(4):
+    name = input("Enter product name: ")
+    price = float(input("Enter product price: "))
+    quantity = int(input("Enter product quantity: "))
+    
+    # Add product to dictionary
+    products[name] = {"price": price, "quantity": quantity}
+  
 compare_prices(budget, products)
